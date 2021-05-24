@@ -7,7 +7,7 @@ func main() {
 	server.Handle("GET", "/api", HandleApi)
 	server.Handle("POST", "/create", PostRequest)
 	server.Handle("POST", "/user", UserPostRequest)
-	//to send
+	//to send to the git
 	server.Handle("GET", "/home", server.AddMiddleware(HandleHome, CheckAuth(), Logger()))
 	server.Listen()
 }
